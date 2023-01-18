@@ -309,7 +309,9 @@ public class LiteApple extends Spider {
             JSONArray urls = vObj.getJSONArray("urls");
             for (int i = 0; i < urls.length(); i++) {
                 JSONObject u = urls.getJSONObject(i);
-                playUrls.add(u.getString("key") + "$" + u.getString("url"));
+                if  (u.getString("url").length() > 40){
+                    playUrls.add(u.getString("key") + "$" + u.getString("url"));
+                }
             }
 
             vodAtom.put("vod_play_from", "LiteApple");

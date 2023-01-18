@@ -3,7 +3,14 @@ package com.github.catvod.demo;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.github.catvod.spider.AppYsV2;
+import com.github.catvod.spider.LiteApple;
+
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
 
@@ -16,9 +23,20 @@ public class MainActivity extends Activity {
 
             @Override
             public void run() {
-
-
-
+                LiteApple aidi1 = new LiteApple();
+                aidi1.init(MainActivity.this, "https://vipmv.co/xgapp.php/v1/");
+                String json = aidi1.homeContent(true);
+                System.out.println(json);
+                JSONObject homeContent = null;
+                try {
+                    homeContent = new JSONObject(aidi1.homeVideoContent());
+                   // System.out.println(homeContent.toString());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                List<String> ids = new ArrayList<String>();
+                ids.add("118769");
+                System.out.println(aidi1.detailContent(ids));
             }
         }).
                 start();
