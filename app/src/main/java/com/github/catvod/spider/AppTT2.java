@@ -30,7 +30,7 @@ import javax.crypto.spec.SecretKeySpec;
 public class AppTT2 extends Spider {
     private static final String KEY = "BK75h4vtOnilWrLt#d0Vt8pIn4IAprcr";
     private static final String IV = "chiWh4vtbSzXPgVZ";
-    private static final String siteUrl = "http://124.248.66.89:7788";
+    private String siteUrl = "http://124.248.66.89:7788";
 
     private String uAgent = "Dalvik/2.1.0 (Linux; U; Android " + Build.VERSION.RELEASE + "; " + Build.MODEL + " Build/" + Build.ID + ")";
 
@@ -57,6 +57,12 @@ public class AppTT2 extends Spider {
     @Override
     public void init(Context context) {
         super.init(context);
+    }
+
+    @Override
+    public void init(Context context, String extend) {
+        super.init(context, extend);
+        siteUrl = extend;
     }
 
     @Override

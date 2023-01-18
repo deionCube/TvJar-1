@@ -3,7 +3,6 @@ package com.github.catvod.demo;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.github.catvod.spider.AppYsV2;
 import com.github.catvod.spider.LiteApple;
 
 import org.json.JSONException;
@@ -44,5 +43,5 @@ public class MainActivity extends Activity {
 }
 
 
-// https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/001.jar;md5;5caa83d2fc3f311cae076455ef363041
+// https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/litleApple.jar;md5;d7ca27e78418769d9726d07f36cd8073
 // https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/json/tvbox.json
