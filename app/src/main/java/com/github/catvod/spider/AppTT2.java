@@ -100,7 +100,7 @@ public class AppTT2 extends Spider {
         try {
             JSONArray videos = new JSONArray();
             try {
-                String url = siteUrl + "/api.php/v1.vod/curnavitemlist?type_id=0";
+                String url = siteUrl + "/api.php/v1.vod/curnavitemlist?type_id=0&token=" + getToken();
                 String content = OkHttpUtil.string(url, getHeaders(url));
                 JSONObject jsonObject = new JSONObject(decryptResponse(content));
                 JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONArray("swiperList");
@@ -127,7 +127,7 @@ public class AppTT2 extends Spider {
     @Override
     public String categoryContent(String tid, String pg, boolean filter, HashMap<String, String> extend) {
         try {
-            String url = siteUrl + "/api.php/v1.vod?type=" + tid + "&page=" + pg + "&pagesize=20";
+            String url = siteUrl + "/api.php/v1.vod?type=" + tid + "&page=" + pg + "&pagesize=20&token=" + getToken();
 //            Set<String> keys = extend.keySet();
 //            for (String key : keys) {
 //                String val = extend.get(key).trim();
@@ -168,7 +168,7 @@ public class AppTT2 extends Spider {
     @Override
     public String detailContent(List<String> ids) {
         try {
-            String url = siteUrl + "/api.php/v1.vod/detilldata?vod_id=" + ids.get(0);
+            String url = siteUrl + "/api.php/v1.vod/detilldata?vod_id=" + ids.get(0) + "&token=" + getToken();
             String content = OkHttpUtil.string(url, getHeaders(url));
             JSONObject dataObject = new JSONObject(decryptResponse(content));
             JSONObject vObj = dataObject.getJSONObject("data");
@@ -271,7 +271,7 @@ public class AppTT2 extends Spider {
     @Override
     public String searchContent(String key, boolean quick) {
         try {
-            String url = siteUrl + "/api.php/v1.vod?wd=" + URLEncoder.encode(key);
+            String url = siteUrl + "/api.php/v1.vod?wd=" + URLEncoder.encode(key)+ "&token=" + getToken();
             String content = OkHttpUtil.string(url, getHeaders(url));
             JSONObject dataObject = new JSONObject(decryptResponse(content));
             JSONArray jsonArray = dataObject.getJSONObject("data").getJSONArray("list");
