@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
                 AppTT2 aidi1 = new AppTT2();
                 aidi1.init(MainActivity.this, "http://124.248.66.89:7788");
                 String json = aidi1.homeContent(true);
+                System.out.println("111");
                 System.out.println(json);
 //                JSONObject homeContent = null;
 //                try {

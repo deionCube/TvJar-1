@@ -51,13 +51,14 @@ public class AppTT2 extends Spider {
     public String homeContent(boolean filter) {
 
         try {
-            JSONArray videos = new JSONArray();
             try {
                 String url = siteUrl + "/api.php/v1.vod/types?token=" + getToken();
                 String content = OkHttpUtil.string(url, getHeaders(url));
                 JSONObject jsonObject = new JSONObject(decryptResponse(content));
                 JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONArray("type_list");
-                return jsonArray.toString();
+                JSONObject result = new JSONObject();
+                result.put("class", jsonArray);
+                return result.toString();
             } catch (Exception e) {
             }
             try {
