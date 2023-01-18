@@ -49,48 +49,33 @@ public class AppTT2 extends Spider {
 
     @Override
     public String homeContent(boolean filter) {
-
         try {
-            try {
-                String url = siteUrl + "/api.php/v1.vod/types?token=" + getToken();
-                String content = OkHttpUtil.string(url, getHeaders(url));
-                JSONObject jsonObject = new JSONObject(decryptResponse(content));
-                JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONArray("type_list");
-                JSONObject result = new JSONObject();
-                result.put("class", jsonArray);
-                return result.toString();
-            } catch (Exception e) {
-            }
-            try {
-                JSONArray classes = new JSONArray();
-                JSONObject jSONObject1 = new JSONObject();
-                jSONObject1.put("type_id", 1);
-                jSONObject1.put("type_name", "电影");
-                classes.put(jSONObject1);
 
-                JSONObject jSONObject2 = new JSONObject();
-                jSONObject2.put("type_id", 2);
-                jSONObject2.put("type_name", "连续剧");
-                classes.put(jSONObject2);
+            JSONArray classes = new JSONArray();
+            JSONObject jSONObject1 = new JSONObject();
+            jSONObject1.put("type_id", 1);
+            jSONObject1.put("type_name", "电影");
+            classes.put(jSONObject1);
 
-                JSONObject jSONObject3 = new JSONObject();
-                jSONObject3.put("type_id", 3);
-                jSONObject3.put("type_name", "动漫");
-                classes.put(jSONObject3);
+            JSONObject jSONObject2 = new JSONObject();
+            jSONObject2.put("type_id", 2);
+            jSONObject2.put("type_name", "连续剧");
+            classes.put(jSONObject2);
 
-                JSONObject jSONObject4 = new JSONObject();
-                jSONObject4.put("type_id", 4);
-                jSONObject4.put("type_name", "综艺");
-                classes.put(jSONObject4);
+            JSONObject jSONObject3 = new JSONObject();
+            jSONObject3.put("type_id", 3);
+            jSONObject3.put("type_name", "动漫");
+            classes.put(jSONObject3);
 
-                JSONObject result = new JSONObject();
-                result.put("class", classes);
+            JSONObject jSONObject4 = new JSONObject();
+            jSONObject4.put("type_id", 4);
+            jSONObject4.put("type_name", "综艺");
+            classes.put(jSONObject4);
 
-                return result.toString();
-            } catch (Throwable th) {
+            JSONObject result = new JSONObject();
+            result.put("class", classes);
 
-            }
-            return "";
+            return result.toString();
         } catch (Throwable th) {
 
         }
@@ -325,6 +310,6 @@ public class AppTT2 extends Spider {
     }
 
     public String getToken() {
-        return encrypt(Long.valueOf(new Date().getTime()).toString(), "UTF-8", KEY, IV);
+        return URLEncoder.encode(encrypt(Long.valueOf(new Date().getTime()).toString(), "UTF-8", KEY, IV));
     }
 }
