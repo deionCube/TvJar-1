@@ -1,7 +1,6 @@
 package com.github.catvod.spider;
 
 import android.content.Context;
-import android.os.Build;
 import android.text.TextUtils;
 import android.util.Base64;
 
@@ -39,7 +38,7 @@ public class AppTT2 extends Spider {
     }
 
     private String getUA(String str) {
-        return "Dart/2.14 (dart:io)";
+        return "Dalvik/2.1.0";
     }
 
     @Override
