@@ -32,8 +32,6 @@ public class AppTT2 extends Spider {
     private static final String IV = "chiWh4vtbSzXPgVZ";
     private String siteUrl = "http://124.248.66.89:7788";
 
-    private String uAgent = "Dalvik/2.1.0 (Linux; U; Android " + Build.VERSION.RELEASE + "; " + Build.MODEL + " Build/" + Build.ID + ")";
-
     private HashMap<String, String> getHeaders(String url) {
         HashMap hashMap = new HashMap();
         hashMap.put("User-Agent", getUA(url));
@@ -41,16 +39,6 @@ public class AppTT2 extends Spider {
     }
 
     private String getUA(String str) {
-        if (!(str.contains("api.php/app") || str.contains("xgapp"))) {
-            if (!str.contains("freekan")) {
-                if (!(str.contains("zsb") || str.contains("fkxs") || str.contains("xays") || str.contains("xcys") || str.contains("szys") || str.contains("dxys") || str.contains("ytys"))) {
-                    if (!str.contains("qnys")) {
-                        return str.contains(".vod") ? "okhttp/4.1.0" : "Dalvik/2.1.0";
-                    }
-                }
-                return "Dart/2.15 (dart:io)";
-            }
-        }
         return "Dart/2.14 (dart:io)";
     }
 
