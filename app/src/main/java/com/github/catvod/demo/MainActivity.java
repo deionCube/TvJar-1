@@ -43,5 +43,5 @@ public class MainActivity extends Activity {
 }
 
 
-// https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/litleApple.jar;md5;d7ca27e78418769d9726d07f36cd8073
+// https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/litleApple.jar;md5;25e8492cf8dc88ce2a7aaaac9eecbf7b
 // https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/json/tvbox.json

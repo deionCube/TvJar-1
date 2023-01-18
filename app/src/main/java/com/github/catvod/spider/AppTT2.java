@@ -55,11 +55,6 @@ public class AppTT2 extends Spider {
     }
 
     @Override
-    public void init(Context context) {
-        super.init(context);
-    }
-
-    @Override
     public void init(Context context, String extend) {
         super.init(context, extend);
         siteUrl = extend;
