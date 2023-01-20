@@ -16,6 +16,7 @@ import org.jsoup.select.Elements;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,6 +24,10 @@ import java.util.regex.Pattern;
 public class Zhaozy extends Spider {
     private static final Pattern aliyun = Pattern.compile("(https://www.aliyundrive.com/s/[^\"]+)");
     private PushAgent pushAgent;
+    private final String siteUrl = "https://zhaoziyuan.la/";
+    private final String CHROME = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36";
+    private String username = "nikalo8893@bitvoo.com";
+    private String password = "P@ssw0rd";
 
     public String detailContent(List<String> list) {
         try {
@@ -30,7 +35,7 @@ public class Zhaozy extends Spider {
             if (pattern.matcher(list.get(0)).find()) {
                 return pushAgent.detailContent(list);
             }
-            Matcher matcher = pattern.matcher(OkHttpUtil.string("https://zhaoziyuan.la/" + list.get(0), null));
+            Matcher matcher = pattern.matcher(OkHttpUtil.string(siteUrl + list.get(0), getHeader()));
             if (!matcher.find()) {
                 return "";
             }
@@ -39,16 +44,16 @@ public class Zhaozy extends Spider {
             //替换videoId 改动部分 ----
             String videoId = list.get(0);
             list.set(0, matcher.group(1));
-            String json =  pushAgent.detailContent(list);
-            if ("".equals(json)){
-                return  "";
+            String json = pushAgent.detailContent(list);
+            if ("".equals(json)) {
+                return "";
             }
             JSONObject result = new JSONObject(json);
             JSONArray jsonList = result.getJSONArray("list");
             JSONObject jsonObject = jsonList.getJSONObject(0);
-            jsonObject.put("vod_id",videoId);
+            jsonObject.put("vod_id", videoId);
             //替换videoId 改动结束
-            return  result.toString();
+            return result.toString();
         } catch (Exception e) {
             SpiderDebug.log(e);
         }
@@ -58,20 +63,40 @@ public class Zhaozy extends Spider {
     public void init(Context context, String str) {
         super.init(context, str);
         pushAgent = new PushAgent();
-        pushAgent.init(context, str);
+        String strs[] = str.split("\\$\\$\\$");
+        String url = strs[0];
+        if (strs.length > 2) {
+            username = strs[1];
+            password = strs[2];
+        }
+        pushAgent.init(context, url);
     }
 
     public String playerContent(String str, String str2, List<String> list) {
         return pushAgent.playerContent(str, str2, list);
     }
 
-    protected static HashMap<String, String> sHeaders() {
-        HashMap<String, String> headers = new HashMap<>();
-        headers.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.62 Safari/537.36");
-        headers.put("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
-        headers.put("Accept-encoding", "gzip, deflate, br");
-        headers.put("Accept-language", "zh-SG,zh;q=0.9,en-GB;q=0.8,en;q=0.7,zh-CN;q=0.6");
+    private Map<String, String> getHeader() {
+        Map<String, String> headers = new HashMap<>();
+        headers.put("User-Agent", CHROME);
+        headers.put("Referer", siteUrl);
+        headers.put("Cookie", getCookie());
         return headers;
+    }
+
+    private String getCookie() {
+        Map<String, String> params = new HashMap<>();
+        params.put("username", username);
+        params.put("password", password);
+        Map<String, String> headers = new HashMap<>();
+        headers.put("User-Agent", CHROME);
+        headers.put("Referer", siteUrl + "login.html");
+        headers.put("Origin", siteUrl);
+        Map<String, List<String>> resp = new HashMap<>();
+        OkHttpUtil.post(siteUrl + "logiu.html", params, headers, resp);
+        StringBuilder sb = new StringBuilder();
+        for (String item : resp.get("set-cookie")) sb.append(item.split(";")[0]).append(";");
+        return sb.toString();
     }
 
     private Pattern regexVid = Pattern.compile("(\\S+)");
@@ -79,7 +104,7 @@ public class Zhaozy extends Spider {
     public String searchContent(String key, boolean quick) {
         try {
             String url = "https://zhaoziyuan.la/so?filename=" + URLEncoder.encode(key);
-            Document docs = Jsoup.parse(OkHttpUtil.string(url, null));
+            Document docs = Jsoup.parse(OkHttpUtil.string(url, getHeader()));
             JSONObject result = new JSONObject();
             JSONArray videos = new JSONArray();
             Elements list = docs.select("div.li_con div.news_text");

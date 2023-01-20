@@ -36,10 +36,12 @@ public class MainActivity extends Activity {
 //                System.out.println(aidi1.playerContent("",url,new ArrayList<String>()));
 
                 Zhaozy aidi1 = new Zhaozy();
-                aidi1.init(MainActivity.this,"http://ali.饭太硬.ml/tok");
+                //aidi1.init(MainActivity.this,"http://ali.饭太硬.ml/tok");
+                aidi1.init(MainActivity.this,"http://ali.饭太硬.ml/tok$$$583472073@qq.com$$$www123456");
                 List list = new ArrayList();
                 list.add("CbTYARN58186C");
-                System.out.println(aidi1.detailContent(list));
+                System.out.println(aidi1.searchContent("少年歌行",false));
+               // System.out.println(aidi1.detailContent(list));
 
             }
         }).start();

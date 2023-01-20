@@ -58,8 +58,7 @@ public class OkHttpUtil {
             return noRedirectClient;
         }
     }
-
-    public static String string(OkHttpClient client, String url, String tag, Map<String, String> paramsMap, Map<String, String> headerMap, Map<String, List<String>> respHeaderMap) {
+    public static String string(OkHttpClient client, String method,String url, String tag, Map<String, String> paramsMap, Map<String, String> headerMap, Map<String, List<String>> respHeaderMap) {
         OKCallBack<String> stringCallback = new OKCallBack<String>() {
             @Override
             public String onParseResponse(Call call, Response response) {
@@ -84,12 +83,18 @@ public class OkHttpUtil {
             public void onResponse(String response) {
             }
         };
-        OKRequest req = new OKRequest(METHOD_GET, url, paramsMap, headerMap, stringCallback);
+        OKRequest req = new OKRequest(method, url, paramsMap, headerMap, stringCallback);
         req.setTag(tag);
         req.execute(client);
         return stringCallback.getResult();
     }
+    public static String string(OkHttpClient client, String url, String tag, Map<String, String> paramsMap, Map<String, String> headerMap, Map<String, List<String>> respHeaderMap) {
+        return string(client,METHOD_GET,url,tag,paramsMap,headerMap,respHeaderMap);
+    }
 
+    public static String post(String url, Map<String, String> paramsMap, Map<String, String> headerMap, Map<String, List<String>> respHeaderMap) {
+        return string(defaultClient(), METHOD_POST, url, null, paramsMap, headerMap, respHeaderMap);
+    }
     public static String stringNoRedirect(String url, Map<String, String> headerMap, Map<String, List<String>> respHeaderMap) {
         return string(noRedirectClient(), url, null, null, headerMap, respHeaderMap);
     }
