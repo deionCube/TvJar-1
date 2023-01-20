@@ -2,7 +2,7 @@
 "spider":"https://hk1.monika.love/tuji-2015/miao/main/TVBox/jar/xo0103.jar;md5;08b4d57b0e1d57c6bb007b587f79fd59",
 
 //"wallpaper":"https://hk1.monika.love/tuji-2015/miao/main/TVBox/bg/mo.png",
-"wallpaper":"https://饭太硬.ga/深色壁纸/api.php",
+"wallpaper":"http://www.kf666888.cn/api/tvbox/img",
     
 "lives":[{"group":"redirect","channels":[{"name":"redirect","urls":["proxy://do=live&type=txt&ext=aHR0cHM6Ly9naHByb3h5LmNvbS9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHVqaS0yMDE1L21pYW8vbWFpbi9UVkJveC90di9iYy50eHQ="]}]}],
 
@@ -69,7 +69,7 @@
 {"key":"Yunsou","name":"🍭云搜","type":3,"api":"csp_Upyunso","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://ali.饭太硬.ml/tok","jar":"https://hk1.monika.love/tuji-2015/miao/main/TVBox/jar/xo1204.jar;md5;3ed5186af28feff28d4d7b7d75504a2d"},
 {"key":"csp_GitCafe","name":"📜小纸条","type":3,"api":"csp_Gitcafe","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://ali.饭太硬.ml/tok","jar":"https://hk1.monika.love/tuji-2015/miao/main/TVBox/jar/xo1204.jar;md5;3ed5186af28feff28d4d7b7d75504a2d"},
 {"key":"YiSou","name":"1️⃣易搜","type":3,"api":"csp_Yisou","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://ali.饭太硬.ml/tok","jar":"https://hk1.monika.love/tuji-2015/miao/main/TVBox/jar/xo1204.jar;md5;3ed5186af28feff28d4d7b7d75504a2d"},
-{"key":"push_agent","name":"推送(阿里)","type":3,"api":"csp_PushAgent","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://ali.饭太硬.ml/tok"},
+{"key":"push_agent","name":"推送(阿里)","type":3,"api":"csp_Push","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://ali.饭太硬.ml/tok"},
 {"key":"csp_AliPanSou","name":"🐱盘搜","type":3,"api":"csp_AliPS","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://ali.饭太硬.ml/tok","jar":"https://hk1.monika.love/tuji-2015/miao/main/TVBox/jar/xo1204.jar;md5;3ed5186af28feff28d4d7b7d75504a2d"},
 {"key":"csp_Zhaozy","name":"🔍找资源","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://ali.饭太硬.ml/tok"},
 {"key":"AppTT2","name":"📍图图影视","type":3,"api":"csp_AppTT2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://124.248.66.89:7788","jar": "https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/litleAppleLongXia.jar;md5;10373e843a551fdca047a5ddd5e3d1eb"},
