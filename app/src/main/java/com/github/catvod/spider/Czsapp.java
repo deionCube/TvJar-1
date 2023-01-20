@@ -1,5 +1,5 @@
 package com.github.catvod.spider;
-
+import android.content.Context;
 import android.text.TextUtils;
 import android.util.Base64;
 
@@ -11,10 +11,15 @@ import com.github.catvod.utils.gZip;
 import com.github.catvod.utils.okhttp.OKCallBack;
 import com.github.catvod.utils.okhttp.OkHttpUtil;
 
+import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.StringReader;
+
+import java.net.URL;
+import java.net.URLConnection;
 import java.net.URLEncoder;
+
 import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +28,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Map;
+import java.util.Set;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
@@ -134,7 +142,7 @@ public class Czsapp extends Spider {
     public String categoryContent(String str, String str2, boolean z, HashMap<String, String> hashMap) {
         try {
             JSONObject jSONObject = new JSONObject();
-            Document doc = Jsoup.parse(OkHttpUtil.string("https://czspp.com/" + str + "/page/" + str2, Headers()));
+            Document doc = Jsoup.parse(OkHttpUtil.string("https://www.c-zzy.com/" + str + "/page/" + str2, Headers()));
             int parseInt = Integer.parseInt(str2);
             int parseInt2 = Integer.parseInt(str2);
                 Matcher matcher = I.matcher(doc.select("div.pagenavi_txt > a.extend").last().attr("href"));
@@ -177,7 +185,7 @@ public class Czsapp extends Spider {
             JSONObject jSONObject = new JSONObject();
             JSONArray jSONArray = new JSONArray();
             JSONObject jSONObject2 = new JSONObject();
-            Document doc = Jsoup.parse(OkHttpUtil.string("https://czspp.com/movie/" + list.get(0) + ".html", Headers()));
+            Document doc = Jsoup.parse(OkHttpUtil.string("https://www.c-zzy.com/movie/" + list.get(0) + ".html", Headers()));
             String trim = doc.select("div.moviedteail_tt > h1").text().trim();
             String pY2 = doc.select("div.dyimg > img").attr("src");
             Iterator<Element> it = doc.select("ul.moviedteail_list > li").iterator();
@@ -241,7 +249,7 @@ public class Czsapp extends Spider {
         try {
 
             JSONObject jSONObject = new JSONObject();
-            Document doc = Jsoup.parse(OkHttpUtil.string("https://czspp.com", Headers()));
+            Document doc = Jsoup.parse(OkHttpUtil.string("https://www.c-zzy.com", Headers()));
             Elements jS = doc.select(".navlist > li > a");
             JSONArray jSONArray = new JSONArray();
             for (Element next : jS) {
@@ -280,10 +288,51 @@ public class Czsapp extends Spider {
             return "";
         }
     }
-
-    protected static HashMap<String, String> Headers() {
+    
+        protected static HashMap<String, String> getHeaders(){
         HashMap<String, String> hashMap = new HashMap<>();
-        hashMap.put("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36");
+        hashMap.put("User-Agent", "Mozilla/5.0 (iPad; CPU OS 13_2_3 like Mac OS X) AppleWebKit/537.36  (KHTML, like Gecko) Version/13.0 Mobile/13B14 Safari/537.36");
+        hashMap.put("referer", "https://www.c-zzy.com");
+        return hashMap;
+        }
+
+    protected static HashMap<String, String> Headers() throws IOException{
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("User-Agent", "Mozilla/5.0 (iPad; CPU OS 13_2_3 like Mac OS X) AppleWebKit/537.36  (KHTML, like Gecko) Version/13.0 Mobile/13B14 Safari/537.36");
+        Pattern id = Pattern.compile("(?<=src=\"/).*?(?=\")");
+        String Content = OkHttpUtil.string("https://www.c-zzy.com/", getHeaders());
+        
+		String ids = "";
+        
+        Matcher matcher1 = id.matcher(Content);
+        
+        if (matcher1.find()) {
+        ids = matcher1.group(0);
+        }
+		
+                            
+          
+                            
+        
+        
+        String jsurl ="https://www.c-zzy.com/" + ids;
+        Pattern key = Pattern.compile("(?<=var key=\").*?(?=\")");
+        String jskey = OkHttpUtil.string(jsurl, getHeaders());
+        Matcher matcher2 = key.matcher(jskey);
+		String jskeys = "";
+        if (matcher2.find()) {
+			jskeys = matcher2.group(0);
+        }
+		URL url = new URL("https://www.c-zzy.com/a20be899_96a6_40b2_88ba_32f1f75f1552_yanzheng_ip.php?type=96c4e20a0e951f471d32dae103e83881&key="+jskeys+"&value=b9c1b06534ddb490f6d5bfcf6d038bc8");
+
+        URLConnection conn = url.openConnection();
+		conn.setRequestProperty("User-Agent" , "Mozilla/5.0 (iPad; CPU OS 13_2_3 like Mac OS X) AppleWebKit/537.36  (KHTML, like Gecko) Version/13.0 Mobile/13B14 Safari/537.36");
+        conn.setRequestProperty("Referer" , "https://www.c-zzy.com/");
+        Map headers = conn.getHeaderFields();
+        Set<String> keys = headers.keySet();
+
+		String cookie = conn.getHeaderField("Set-Cookie");
+        hashMap.put("cookie", cookie);
         return hashMap;
     }
 
@@ -293,7 +342,7 @@ public class Czsapp extends Spider {
         String str4;
         Elements G8;
         try {
-            String K2 = OkHttpUtil.string("https://czspp.com/v_play/" + str2 + ".html", Headers());
+            String K2 = OkHttpUtil.string("https://www.c-zzy.com/v_play/" + str2 + ".html", Headers());
             Document UR = Jsoup.parse(K2);
             Matcher matcher = Y.matcher(K2);
             if (matcher.find()) {
@@ -399,7 +448,7 @@ public class Czsapp extends Spider {
     public String searchContent(String str, boolean z) {
         try {
             JSONObject jSONObject = new JSONObject();
-            Elements jS = Jsoup.parse(OkHttpUtil.string("https://czspp.com/xssearch?q=" + URLEncoder.encode(str), Headers())).select("div.mi_ne_kd > ul > li");
+            Elements jS = Jsoup.parse(OkHttpUtil.string("https://www.c-zzy.com/xssearch?q=" + URLEncoder.encode(str), Headers())).select("div.mi_ne_kd > ul > li");
             JSONArray jSONArray = new JSONArray();
             for (Element next : jS) {
                 Matcher matcher = Db.matcher(next.select("a").attr("href"));
