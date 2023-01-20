@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.github.catvod.spider.AppLongXia;
 import com.github.catvod.spider.AppTT2;
 import com.github.catvod.spider.LiteApple;
+import com.github.catvod.spider.Zhaozy;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,20 +26,20 @@ public class MainActivity extends Activity {
 
             @Override
             public void run() {
-                AppLongXia aidi1 = new AppLongXia();
-//                AppTT2 aidi1 = new AppTT2();
-               // aidi1.init(MainActivity.this, "http://39.107.101.221:9099/api.php/Videoone");
-                String json = aidi1.homeContent(true);
-                System.out.println(json);
-                System.out.println(aidi1.homeVideoContent());
-//                System.out.println(aidi1.categoryContent("20","1",false,new HashMap<>()));
+//                AppLongXia aidi1 = new AppLongXia();
+//                String json = aidi1.homeContent(true);
+//                System.out.println(json);
+//                System.out.println(aidi1.homeVideoContent());
+//                List list = new ArrayList();
+//                list.add("124121");
+//                String url = "http://39.107.101.221:2025/iphonex/100.php?url=http://v.youku.com/v_show/id_XNTkxOTk0NDI2NA==.html!!!!xcv0873737|http://39.107.101.221:2025/iphonex/400.php?url=http://v.youku.com/v_show/id_XNTkxOTk0NDI2NA==.html!!!!xcv0873737";
+//                System.out.println(aidi1.playerContent("",url,new ArrayList<String>()));
+
+                Zhaozy aidi1 = new Zhaozy();
+                aidi1.init(MainActivity.this,"http://ali.饭太硬.ml/tok");
                 List list = new ArrayList();
-                list.add("124121");
-//                list.add("365785");
-               // System.out.println(aidi1.detailContent(list));
-               // System.out.println(aidi1.searchContent("少年歌行",true));
-                String url = "http://39.107.101.221:2025/iphonex/100.php?url=http://v.youku.com/v_show/id_XNTkxOTk0NDI2NA==.html!!!!xcv0873737|http://39.107.101.221:2025/iphonex/400.php?url=http://v.youku.com/v_show/id_XNTkxOTk0NDI2NA==.html!!!!xcv0873737";
-                System.out.println(aidi1.playerContent("",url,new ArrayList<String>()));
+                list.add("CbTYARN58186C");
+                System.out.println(aidi1.detailContent(list));
 
             }
         }).start();

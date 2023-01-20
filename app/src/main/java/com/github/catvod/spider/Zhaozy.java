@@ -30,12 +30,25 @@ public class Zhaozy extends Spider {
             if (pattern.matcher(list.get(0)).find()) {
                 return pushAgent.detailContent(list);
             }
-            Matcher matcher = pattern.matcher(OkHttpUtil.string("https://zhaoziyuan.me/" + list.get(0), null));
+            Matcher matcher = pattern.matcher(OkHttpUtil.string("https://zhaoziyuan.la/" + list.get(0), null));
             if (!matcher.find()) {
                 return "";
             }
+//            list.set(0, matcher.group(1));
+//            return pushAgent.detailContent(list);
+            //替换videoId 改动部分 ----
+            String videoId = list.get(0);
             list.set(0, matcher.group(1));
-            return pushAgent.detailContent(list);
+            String json =  pushAgent.detailContent(list);
+            if ("".equals(json)){
+                return  "";
+            }
+            JSONObject result = new JSONObject(json);
+            JSONArray jsonList = result.getJSONArray("list");
+            JSONObject jsonObject = jsonList.getJSONObject(0);
+            jsonObject.put("vod_id",videoId);
+            //替换videoId 改动结束
+            return  result.toString();
         } catch (Exception e) {
             SpiderDebug.log(e);
         }
@@ -65,7 +78,7 @@ public class Zhaozy extends Spider {
 
     public String searchContent(String key, boolean quick) {
         try {
-            String url = "https://zhaoziyuan.me/so?filename=" + URLEncoder.encode(key);
+            String url = "https://zhaoziyuan.la/so?filename=" + URLEncoder.encode(key);
             Document docs = Jsoup.parse(OkHttpUtil.string(url, null));
             JSONObject result = new JSONObject();
             JSONArray videos = new JSONArray();
@@ -98,3 +111,4 @@ public class Zhaozy extends Spider {
         return "";
     }
 }
+//https://github.com/Damonwei1120/TvJar1/blob/master/app/src/main/java/com/github/catvod/spider/Zhaozy.java
