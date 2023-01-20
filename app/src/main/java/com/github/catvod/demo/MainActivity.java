@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
                 List list = new ArrayList();
                 list.add("CbTYARN58186C");
                 System.out.println(aidi1.searchContent("少年歌行",false));
-               // System.out.println(aidi1.detailContent(list));
+                System.out.println(aidi1.detailContent(list));
 
             }
         }).start();
