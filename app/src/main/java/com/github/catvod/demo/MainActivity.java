@@ -3,16 +3,9 @@ package com.github.catvod.demo;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.github.catvod.spider.AppLongXia;
-import com.github.catvod.spider.AppTT2;
-import com.github.catvod.spider.LiteApple;
-import com.github.catvod.spider.Zhaozy;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.github.catvod.spider.Zhaozy1;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends Activity {
@@ -35,7 +28,7 @@ public class MainActivity extends Activity {
 //                String url = "http://39.107.101.221:2025/iphonex/100.php?url=http://v.youku.com/v_show/id_XNTkxOTk0NDI2NA==.html!!!!xcv0873737|http://39.107.101.221:2025/iphonex/400.php?url=http://v.youku.com/v_show/id_XNTkxOTk0NDI2NA==.html!!!!xcv0873737";
 //                System.out.println(aidi1.playerContent("",url,new ArrayList<String>()));
 
-                Zhaozy aidi1 = new Zhaozy();
+                Zhaozy1 aidi1 = new Zhaozy1();
                 //aidi1.init(MainActivity.this,"http://ali.饭太硬.ml/tok");
                 aidi1.init(MainActivity.this,"http://ali.饭太硬.ml/tok$$$583472073@qq.com$$$www123456");
                 List list = new ArrayList();
