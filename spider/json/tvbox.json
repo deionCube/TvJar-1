@@ -4,7 +4,7 @@
     //"wallpaper":"https://hk1.monika.love/tuji-2015/miao/main/TVBox/bg/mo.png",
     "wallpaper":"http://www.kf666888.cn/api/tvbox/img",
 
-    "lives":[{"group":"redirect","channels":[{"name":"redirect","urls":["proxy://do=live&type=txt&ext=aHR0cHM6Ly9naC5hcGkuOTk5ODg4NjYueHl6L2h0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90dWppLTIwMTUvbWlhby9tYWluL1RWQm94L3R2L2JjLnR4dA=="]}]}],
+    "lives":[{"group":"redirect","channels":[{"name":"redirect","urls":["proxy://do=live&type=txt&ext=aHR0cDovL3d3dy5sb29vLnRvcC9hcHAvY29uZi9saXZlLnR4dA=="]}]}],
 
     "rules":[
         {"host":"*","rule":["douyinvod.com","/video/tos/cn/"]},
