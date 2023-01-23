@@ -40,7 +40,8 @@ public class MainActivity extends Activity {
         }).start();
     }
 }
-
+//http://www.looo.top/app/conf/live.txt
+//
 //{"key":"csp_LiteApple","name":"🍎小苹果(ijk)","type":3,"api":"csp_LiteApple","searchable":1,"quickSearch":1,"filterable":1,"playerType":1,"jar": "https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/litleAppleLongXia.jar;md5;10373e843a551fdca047a5ddd5e3d1eb"},
 //{"key":"AppLongXia","name":"🦞龙虾视频","type":3,"api":"csp_AppLongXia","searchable":1,"quickSearch":1,"filterable":1,"playerType":1,"jar": "https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/litleAppleLongXia.jar;md5;10373e843a551fdca047a5ddd5e3d1eb"},
 //{"key":"AppTT2","name":"📍图图影视","type":3,"api":"csp_AppTT2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://124.248.66.89:7788","jar": "https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/litleAppleLongXia.jar;md5;10373e843a551fdca047a5ddd5e3d1eb"},
