@@ -61,7 +61,13 @@
 {"key":"T4_douban","name":"🏠T4聚合","type":4,"api":"http://42.192.248.11:8080/vod?sites=all&ali_token=http://home.jundie.top:666/token.txt","searchable":1,"quickSearch":1,"filterable":1},
 //{"key":"dr_豆瓣","name":"🏠首页推荐","type":3,"api":"https://hk1.monika.love/tuji-2015/DRPY/master/libs/drpy2.min.js","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://hk1.monika.love/tuji-2015/miao/main/TVBox/drpyjs/drpy.js"},
 
-#爬虫站
+#神马资源
+{"key":"csp_appysv2_热剧天堂TV","name":"🐎热剧天堂TV(神马)","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://175.178.7.35:2020/api.php/Sntv/vod/"},
+{"key":"csp_appysv2_醉璃笙TV","name":"🐎醉璃笙TV(神马)","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://web.xhdj.vip/api.php/iptv/vod/"},
+{"key":"csp_appysv2_云玺TV","name":"🐎云玺TV(神马)","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://43.138.193.213:8181//api.php/Miguo/vod/"},
+{"key":"csp_appysv2_天空TV","name":"🐎天空TV(神马)","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://tv.tkys.tv/api.php/iptv/vod/"},
+{"key":"csp_appysv2_嘿荼锋","name":"🐎嘿荼锋(神马)","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://tv.hfys8.vip/api.php/Sntv/vod/"},
+{"key":"csp_appysv2_2号币","name":"🐎2号币(神马)","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://phoebe.cf/api.php/iptv/vod/"},
 {"key":"csp_Zhaozy","name":"🔍找资源","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://ali.饭太硬.ml/tok$$$583472073@qq.com$$$www123456"},
 {"key":"AppTT","name":"🐰图图(SP)","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"110c922de7d69804467fb83d3bb664b5"}
 ],
