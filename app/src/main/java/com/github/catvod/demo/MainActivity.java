@@ -41,6 +41,7 @@ public class MainActivity extends Activity {
     }
 }
 //http://www.looo.top/app/conf/live.txt
+//https://uzbox.com/tech/tvbox-jiekou.html
 //
 //{"key":"csp_LiteApple","name":"🍎小苹果(ijk)","type":3,"api":"csp_LiteApple","searchable":1,"quickSearch":1,"filterable":1,"playerType":1,"jar": "https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/litleAppleLongXia.jar;md5;10373e843a551fdca047a5ddd5e3d1eb"},
 //{"key":"AppLongXia","name":"🦞龙虾视频","type":3,"api":"csp_AppLongXia","searchable":1,"quickSearch":1,"filterable":1,"playerType":1,"jar": "https://gitcdn.top/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/litleAppleLongXia.jar;md5;10373e843a551fdca047a5ddd5e3d1eb"},
