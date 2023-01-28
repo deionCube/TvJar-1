@@ -816,17 +816,9 @@
 {"key":"小猫咪","name":"📺小猫咪(官)","type":1,"api":"http://zy.xiaomaomi.cc/api.php/provide/vod/","searchable":1,"quickSearch":1},
 
 #切片资源
-{"key":"天堂资源2","name":"📒天堂资源","type":0,"api":"https://bttcj.com/inc/sapi.php","searchable":1,"quickSearch":1,"filterable":0},
-{"key":"极速BT资源","name":"📒极速BT资源(切)","type":1,"api":"https://api.jisubt.com/videos","searchable":1,"quickSearch":1},
-{"key":"1080资源库","name":"📒1080资源库(切)","type":1,"api":"https://api.1080zyku.com/inc/api_mac10.php","searchable":1,"quickSearch":1},
-{"key":"TOM资源","name":"📒TOM资源(切)","type":1,"api":"https://api.tomcaiji.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-{"key":"快车资源","name":"📒快车资源(切)","type":1,"api":"https://caiji.kczyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-{"key":"松鼠资源","name":"📒松鼠资源(切)","type":1,"api":"https://m3u8.songshuzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-{"key":"多多资源","name":"📒多多资源(切)","type":1,"api":"https://www.ddzyz1.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
-{"key":"FOX资源","name":"📒FOX资源(切)","type":1,"api":"https://api.foxzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1},
 {"key":"量子资源","name":"📒量子资源(切)","type":1,"api":"http://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/","searchable":1,"quickSearch":1},
 {"key":"非凡资源","name":"📒量子资源(切)","type":1,"api":"http://cj.ffzyapi.com/api.php/provide/vod/from/ffm3u8/","searchable":1,"quickSearch":1},
-
+{"key":"天堂资源2","name":"📒天堂资源","type":0,"api":"https://bttcj.com/inc/sapi.php","searchable":1,"quickSearch":1,"filterable":0},
 {"key":"sdjs_猫了个咪","name":"🔮猫了个咪[DRPY]","type":3,"api":"https://gitcode.net/weixin_42268138/dr_py/-/raw/master/libs/drpy.ym.js","searchable":0,"quickSearch":0,"filterable":0,"ext":"https://gitcode.net/weixin_42268138/dr_py/-/raw/master/js/猫了个咪.js"}
 ],
 
