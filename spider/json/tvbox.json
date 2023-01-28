@@ -794,7 +794,7 @@
 {"name":"⌛搬运","type":1,"url":"https://dbapp.hengj.cn/tg/by.php?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
 {"name":"⌛️1080","type":1,"url":"http://rxjx.kuanjv.com/allm3u8.php?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
 {"name":"⌛️懒懒","type":1,"url":"http://lanlan.ckflv.cn/?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
-{"name":"⌛️FUQ","type":1,"url":"http://jx.fuqizhishi.com:63/API.php?appkey=feimao&url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
+{"name":"⌛️贝贝三号","type":1,"url":"http://json.yimufund.net/jsonindex.php?url=","ext":{"header":{"User-Agent":"LuaSocket 3.0-rc1"}}},
 {"name":"🆗1MITY","type":0,"url":"https://www.nxflv.com/?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
 {"name":"🆗38MITY","type":0,"url":"http://91fanli.top/m3u8/?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
 {"name":"🈯2MITY","type":0,"url":"https://jx.bozrc.com:4433/player/?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
