@@ -795,6 +795,7 @@
 {"name":"⌛搬运","type":1,"url":"https://dbapp.hengj.cn/tg/by.php?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
 {"name":"⌛️太空影视","type":1,"url":"http://124.222.68.182/jiexi/4KHD.php/?url=","ext":{"header":{"User-Agent":"okhttp/4.1.0"}}},
 {"name":"⌛️懒懒","type":1,"url":"http://lanlan.ckflv.cn/?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
+{"name":"⌛️星辰","type":1,"url":"https://json.xn--9kq078cdn3a.cc/api/?key=22ea7ae4746073f5ea13e9079c024c7d&url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
 {"name":"⌛️贝贝三号","type":1,"url":"http://json.yimufund.net/jsonindex.php?url=","ext":{"header":{"User-Agent":"LuaSocket 3.0-rc1"}}},
 {"name":"🆗1MITY","type":0,"url":"https://www.nxflv.com/?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
 {"name":"🆗38MITY","type":0,"url":"http://91fanli.top/m3u8/?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
