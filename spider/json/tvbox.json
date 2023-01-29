@@ -82,7 +82,7 @@
 {"key":"Lezhu_spider","name":"🐷乐猪影视(SP)","api":"csp_Lezhu","type":3,"filterable":1,"quickSearch":1,"searchable":1},
 {"key":"spider_Bttoo","name":"📚2BT(SP)","type":3,"api":"csp_Bttoo","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_LiteApple","name":"🍎小苹果(ijk)","type":3,"api":"csp_LiteApple","searchable":1,"quickSearch":1,"filterable":1},
-{"key":"AppLongXia","name":"🦞龙虾视频","type":3,"api":"csp_AppLongXia","searchable":1,"quickSearch":1,"filterable":1,"playerType":1,"jar":"https://gh.api.99988866.xyz/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/1_20.jar;md5;62c293b08e47b38345635e1562c287ae"},
+{"key":"AppLongXia","name":"🦞龙虾视频","type":3,"api":"csp_AppLongXia","searchable":1,"quickSearch":1,"filterable":1,"playerType":1,"jar":"https://gh.api.99988866.xyz/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/longXia.jar;md5;79a0048f56826cb4a4c6035ec8db9ed1"},
 {"key":"csp_剧荒TV(SP)","name":"👻剧荒TV(SP)","type":3,"api":"csp_Juhuang","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"mjxq_spider","name":"🌏美剧星球(SP)","type":3,"api":"csp_Mjxq","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Ddrk","name":"🎬低端影视(SP)","api":"csp_Ddrk","type":3,"searchable":1,"quickSearch":1,"filterable":1},
