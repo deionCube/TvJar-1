@@ -3,6 +3,7 @@ package com.github.catvod.demo;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.github.catvod.spider.BuLei;
 import com.github.catvod.spider.Zhaozy1;
 
 import java.util.ArrayList;
@@ -28,13 +29,16 @@ public class MainActivity extends Activity {
 //                String url = "http://39.107.101.221:2025/iphonex/100.php?url=http://v.youku.com/v_show/id_XNTkxOTk0NDI2NA==.html!!!!xcv0873737|http://39.107.101.221:2025/iphonex/400.php?url=http://v.youku.com/v_show/id_XNTkxOTk0NDI2NA==.html!!!!xcv0873737";
 //                System.out.println(aidi1.playerContent("",url,new ArrayList<String>()));
 
-                Zhaozy1 aidi1 = new Zhaozy1();
-                //aidi1.init(MainActivity.this,"http://ali.饭太硬.ml/tok");
-                aidi1.init(MainActivity.this,"http://ali.饭太硬.ml/tok$$$583472073@qq.com$$$www123456");
-                List list = new ArrayList();
-                list.add("k0vBX25MIbM3Y");
-                //System.out.println(aidi1.searchContent("少年歌行",false));
-                System.out.println(aidi1.detailContent(list));
+//                Zhaozy1 aidi1 = new Zhaozy1();
+//                //aidi1.init(MainActivity.this,"http://ali.饭太硬.ml/tok");
+//                aidi1.init(MainActivity.this,"http://ali.饭太硬.ml/tok$$$583472073@qq.com$$$www123456");
+//                List list = new ArrayList();
+//                list.add("k0vBX25MIbM3Y");
+//                //System.out.println(aidi1.searchContent("少年歌行",false));
+//                System.out.println(aidi1.detailContent(list));
+
+                BuLei bulei = new BuLei();
+                System.out.println( bulei.playerContent(null,"837/sid/1/nid/2",null));
 
             }
         }).start();
