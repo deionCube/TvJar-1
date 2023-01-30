@@ -83,7 +83,7 @@
 {"key":"spider_Bttoo","name":"📚2BT(SP)","type":3,"api":"csp_Bttoo","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_LiteApple","name":"🍎小苹果(ijk)","type":3,"api":"csp_LiteApple","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"AppLongXia","name":"🦞龙虾视频","type":3,"api":"csp_AppLongXia","searchable":1,"quickSearch":1,"filterable":1,"playerType":1,"jar":"https://raw.iqiq.io/smallgirl/TvJar/master/spider/longXia.jar;md5;79a0048f56826cb4a4c6035ec8db9ed1"},
-{"key":"csp_Ddrk","name":"🎬低端影视(SP)","api":"csp_Ddrk","type":3,"searchable":1,"quickSearch":1,"filterable":1,"jar":"https://raw.iqiq.io/smallgirl/TvJar/master/spider/ddrk.jar;md5;750831b9fa3b30a2659e3a650f9b5261"},
+{"key":"csp_Ddrk","name":"🎬低端影视(SP)","api":"csp_Ddrk","type":3,"searchable":1,"quickSearch":1,"filterable":1,"jar":"https://raw.iqiq.io/smallgirl/TvJar/master/spider/ddrk.jar;md5;9e785cdfca6e6cbac3367bec784ac820"},
 {"key":"csp_AppBuLei","name":"🍺布蕾影视(App)","type":3,"api":"csp_AppBuLei","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://raw.iqiq.io/smallgirl/TvJar/master/spider/buLei.jar;md5;a5ae6e49e425d4bc1cdf4e2bcab679e8","ext":"https://tv.bulei.cc/api2.php/v1.vod$$$bulei-1.0.0"},
 {"key":"csp_BuLei","name":"🍺布蕾影视(SP)","type":3,"api":"csp_BuLei","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Lib","name":"🔷Libvio(SP)","type":3,"api":"csp_Lib","searchable":1,"quickSearch":1,"filterable":1},
