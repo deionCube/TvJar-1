@@ -87,7 +87,7 @@
 {"key":"mjxq_spider","name":"🌏美剧星球(SP)","type":3,"api":"csp_Mjxq","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Ddrk","name":"🎬低端影视(SP)","api":"csp_Ddrk","type":3,"searchable":1,"quickSearch":1,"filterable":1},
 //{"key":"csp_Nbys","name":"📺泥巴(SP)","type":3,"api":"csp_Nbys","searchable":1,"quickSearch":1,"filterable":1},
-{"key":"csp_AppBuLei","name":"🍺布蕾影视(App)","type":3,"api":"csp_AppBuLei","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://gh.api.99988866.xyz/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/buLei.jar;md5;854bb344b8fc56472404c58e955bfb06","ext":"https://tv.bulei.cc/api2.php/v1.vod$$$bulei-1.0.0"},
+{"key":"csp_AppBuLei","name":"🍺布蕾影视(App)","type":3,"api":"csp_AppBuLei","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://gh.api.99988866.xyz/https://raw.githubusercontent.com/smallgirl/TvJar/master/spider/buLei.jar;md5;a5ae6e49e425d4bc1cdf4e2bcab679e8","ext":"https://tv.bulei.cc/api2.php/v1.vod$$$bulei-1.0.0"},
 {"key":"csp_BuLei","name":"🍺布蕾影视(SP)","type":3,"api":"csp_BuLei","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Zjdr","name":"🌐追剧达人(SP)","type":3,"api":"csp_Zjdr","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Lib","name":"🔷Libvio(SP)","type":3,"api":"csp_Lib","searchable":1,"quickSearch":1,"filterable":1},
