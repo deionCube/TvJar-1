@@ -774,8 +774,6 @@
 {"key":"drpy_vidhub","name":"📁vidhub[DRPY]","type":3,"api":"https://raw.iqiq.io/tuji-2015/DRPY/master/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable":0,"ext":"https://raw.iqiq.io/tuji-2015/miao/main/TVBox/drpyjs/vidhub.js"},
 {"key":"drpy_蚂蚁影视","name":"📁蚂蚁影视[DRPY]","type":3,"api":"https://raw.iqiq.io/tuji-2015/DRPY/master/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable":0,"ext":"https://raw.iqiq.io/tuji-2015/miao/main/TVBox/drpyjs/蚂蚁影视.js"},
 {"key":"drpy_zbk","name":"📁真不卡[DRPY]","type":3,"api":"js_drpy_zbk","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://13.125.130.101:55834/txt/pluto/drpy.js"},
-{"key":"drpy_007影视","name":"📁007影视[DRPY]","type":3,"api":"https://raw.iqiq.io/tuji-2015/DRPY/master/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable":0,"ext":"https://raw.iqiq.io/tuji-2015/miao/main/TVBox/drpyjs/007影视.js"},
-
 #官方解析
 {"key":"天堂资源1","name":"📺天堂资源(官)","type":1,"api":"http://vipmv.cc/api.php/provide/vod/","searchable":1,"quickSearch":1},
 {"key":"忆梦","name":"📺忆梦(官)","type":1,"api":"http://anltv.cn/api.php/provide/vod/","searchable":1,"quickSearch":1},
